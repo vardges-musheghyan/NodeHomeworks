@@ -25,8 +25,15 @@ function config(pathToFile = defaultFilePath) {
 
     // since we should do this before running the rest, we use readFileSync
 
+    let fileText;
+
     try{
-        const fileText = fs.readFileSync(path.resolve(process.cwd(), defaultFilePath)).toString();
+
+        fileText = fs.readFileSync(path.resolve(process.cwd(), defaultFilePath)).toString();
+
+        //
+
+
     }catch (e) {
         console.error('most probably you have forgotten to create the .env file:((');
         process.exit(1)
